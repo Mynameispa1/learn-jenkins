@@ -5,6 +5,8 @@ pipeline {
         
         }
     } 
+
+    // Build stage
     stages {
         stage('Build') { 
             steps {
@@ -20,6 +22,19 @@ pipeline {
             steps {
                 echo 'Deploying..' 
             }
+        }
+    }
+
+    // post build 
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        failure {
+            echo 'This block will execute if the pipeline failed..'
+        }
+        success {
+            echo 'It is successful'
         }
     }
 }
