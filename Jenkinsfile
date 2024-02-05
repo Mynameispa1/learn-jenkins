@@ -35,7 +35,11 @@ pipeline {
         }
 
         failure { 
-            echo 'This is Failed!'
+            echo 'This is Failed...!'
+        }
+
+        success {
+            echo 'This is success...!'
         }
     }
 
