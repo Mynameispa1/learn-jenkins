@@ -31,6 +31,7 @@ pipeline {
             steps {
                 echo 'building..'
             }
+            
         }
         stage('Test') { 
             steps {
