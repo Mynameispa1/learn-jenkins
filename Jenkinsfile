@@ -1,20 +1,5 @@
 pipeline {
-    // agent {
-    //     node {
-    //         label 'AGENT-1'
-        
-    //     }
-    // } 
-
-    // environment { 
-    //     GREETING = 'Hello Jenkins'
-    // }
-
-    // options {
-    //     timeout(time: 1, unit: 'HOURS') 
-    //     disableConcurrentBuilds()
-     }
-
+    agent any
     // Build stage
     stages {
         stage('Build') { 
@@ -36,17 +21,6 @@ pipeline {
             }
         }
     }
+}
 
-    // post build 
-    // post { 
-    //     always { 
-    //         echo 'I will always say Hello again!'
-    //     }
-    //     failure {
-    //         echo 'This block will execute if the pipeline failed..'
-    //     }
-    //     success {
-    //         echo 'It is successful'
-    //     }
-    // }
-// }
+   
