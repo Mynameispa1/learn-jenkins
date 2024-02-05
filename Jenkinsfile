@@ -1,19 +1,19 @@
 pipeline {
-    agent {
-        node {
-            label 'AGENT-1'
+    // agent {
+    //     node {
+    //         label 'AGENT-1'
         
-        }
-    } 
+    //     }
+    // } 
 
-    environment { 
-        GREETING = 'Hello Jenkins'
-    }
+    // environment { 
+    //     GREETING = 'Hello Jenkins'
+    // }
 
-    options {
-        timeout(time: 1, unit: 'HOURS') 
-        disableConcurrentBuilds()
-    }
+    // options {
+    //     timeout(time: 1, unit: 'HOURS') 
+    //     disableConcurrentBuilds()
+     }
 
     // Build stage
     stages {
@@ -38,15 +38,15 @@ pipeline {
     }
 
     // post build 
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
-        failure {
-            echo 'This block will execute if the pipeline failed..'
-        }
-        success {
-            echo 'It is successful'
-        }
-    }
+    // post { 
+    //     always { 
+    //         echo 'I will always say Hello again!'
+    //     }
+    //     failure {
+    //         echo 'This block will execute if the pipeline failed..'
+    //     }
+    //     success {
+    //         echo 'It is successful'
+    //     }
+    // }
 }
