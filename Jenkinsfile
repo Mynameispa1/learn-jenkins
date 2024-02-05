@@ -14,10 +14,11 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh """
-                echo 'Here I wrote shell script'
-                echo "$GREETING"
-                """ 
+                // sh """
+                // echo 'Here I wrote shell script'
+                // echo "$GREETING"
+                // """ 
+                echo 'Success..'
             }
         }
     }
