@@ -4,6 +4,9 @@ pipeline {
         label 'AGENT-1'
     }
 }
+    environment { 
+        Greeting = 'Hello Jenkins'
+    }
    //   build
     stages {
         stage('Build') { 
@@ -18,7 +21,10 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                echo 'Deploy.'
+                sh '''
+                    echo "Here I am writing shell script"
+                    env
+                '''
             }
         }
     }
@@ -32,7 +38,7 @@ pipeline {
             echo 'This run is the pipepline get fail...'
         }
     success {
-        echo 'This run if thw pipeline success...'
+        echo 'This run if the pipeline success...'
     }    
   }
 }
