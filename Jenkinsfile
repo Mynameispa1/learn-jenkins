@@ -8,7 +8,8 @@ pipeline {
         Greeting = 'Hello Jenkins'
     }
     options {
-        timeout(time: 1, unit: 'SECONDS') 
+        timeout(time: 1, unit: 'HOURS') 
+        disableConcurrentBuilds()
     }
    //   build
     stages {
@@ -27,7 +28,6 @@ pipeline {
                 sh '''
                     echo "Here I am writing shell script"
                     echo "$Greeting"
-                    sleep 10
                 '''
             }
         }
