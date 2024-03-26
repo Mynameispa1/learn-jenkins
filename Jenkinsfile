@@ -46,7 +46,7 @@ pipeline {
         stage('check params'){
             steps {
                 sh """
-                    echo "Hello ${params.PERSON}"
+                    echo  "Hello ${params.PERSON}"
 
                     echo "Biography: ${params.BIOGRAPHY}"
 
@@ -59,7 +59,7 @@ pipeline {
             }
         }
     }
-    
+
   //post build
   post { 
         always { 
