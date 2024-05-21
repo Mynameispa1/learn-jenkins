@@ -4,6 +4,10 @@ pipeline {
         label 'AGENT-1'
         }
     }
+
+    environment { 
+        Name = 'Pavan'
+    }
     // build
     stages {
         stage('Build') {
@@ -18,7 +22,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh """
+                    echo 'Here I am writing shell script'
+                    env
+                """
+                // echo 'Deploying....'
             }
         }
     }
