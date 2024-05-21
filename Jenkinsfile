@@ -8,6 +8,10 @@ pipeline {
     environment { 
         Name = 'Pavan'
     }
+
+    options {
+        timeout(time: 1, unit: 'SECONDS') 
+    }
     // build
     stages {
         stage('Build') {
@@ -25,6 +29,7 @@ pipeline {
                 sh """
                     echo 'Here I am writing shell script'
                     echo '$Name'
+                    sleep 10
                 """
                 // echo 'Deploying....'
             }
