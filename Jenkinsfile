@@ -30,7 +30,6 @@ pipeline {
                 sh """
                     echo 'Here I am writing shell script'
                     echo '$Name'
-                    sleep 10
                 """
                 // echo 'Deploying....'
             }
