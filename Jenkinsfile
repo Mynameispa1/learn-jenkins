@@ -72,7 +72,7 @@ pipeline {
         }
 
          success { 
-            echo 'This will run when pipeline is success'
+            echo 'This will run when pipeline is successful'
         }
     }
 }
